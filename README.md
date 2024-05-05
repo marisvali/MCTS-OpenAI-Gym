@@ -1,0 +1,5 @@
+I extracted the code found here from https://github.com/ciamic/MCTS.
+I adapted it a little bit for my needs.
+The original repo uses 'CartPole-v0' as a proof that Monte Carlo Tree Search was implemented correctly.
+However, after trying several other games from the OpenAI Gym, I couldn't find anything else that fits. I tried MountainCar and Breakout.
+I think the explanation is that MCTS is not fit for games with physical spaces where you can move around. Because a rollout in that kind of game is going to be a lot of jiggling around, not doing much. CartPole is surprisingly one of the games where you do move around in a physical space but the whole point is to jiggle around and keep the pole straight. I think MCTS is a bad fit for anything else that requires keeping the same move direction for a long time in order to get a reward (like MountainCar).
